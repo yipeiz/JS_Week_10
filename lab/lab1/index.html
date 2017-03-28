@@ -7,28 +7,119 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/leaflet.css" />
     <!-- Choose a frontend framework CSS file: -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
     <!-- <link rel="stylesheet" href="css/material.css" /> -->
     <!-- <link rel="stylesheet" href="css/assembly.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
   </head>
   <body>
     <!-- Sidebar -->
+    <div id = "myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Manufacturer</h4>
+          </div>
+          <div id="smallitem2">This manufacturer has low inventory</div>
+          <div class="modal-header">
+            <h4 class="item-heading" style = "float: left">Tandy's Basketweavers</h4>
+            <div class="btn-group" role="group" aria-label="..." style = "float: right">
+              <button type="button" class="btn btn-default">Edit</button>
+              <button type="button" class="btn btn-default">Delete</button>
+              <button type="button" class="btn btn-default">Export</button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-3">
+                <h5><b>Address</b></h5>
+                <div>490 Freedom Drive<br>
+                Philadelphia, PA 19425</div>
+              </div>
+              <div class="col-md-3">
+                <h5><b>Contact</b></h5>
+                <div>Dave Javeris<br>
+                Senior Weaver<br>
+                dj@tbw.com</div>
+              </div>
+              <div class="col-md-5" style = "text-align:center">
+                <h1 class="text-primary" style =  "font-size: 60px;">324</h1>
+                <div>Baskets sold in past 7 days</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <label for="exampleInputPassword1">Sales</label>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Purchase</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>Fruit Basket</td>
+                </tr>
+                <tr>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>Gift Basket</td>
+                </tr>
+                <tr>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>Easter Basket</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <div class="sidebar">
       <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
-          <div class="topright-button" style="float: right">
-            [Add New]
+          <div class="btn-group" style = "float: right">
+            <button type="button" class="btn btn-info" >Add New</button>
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">View History</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Email All Manufactures</a></li>
+            </ul>
           </div>
           <div class="navbar-header">
-            <a href="#">Manufacturers</a>
+              <h4>Manufacturers</h4>
           </div>
         </div>
+        <br />
+        <div class="input-group">
+           <input type="text" class="form-control" placeholder="Search for...">
+           <span class="input-group-btn">
+             <button class="btn btn-default" type="button">
+               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+             </button>
+           </span>
+        </div><!-- /input-group -->
       </nav>
       <div class="item">
         <h2 class="item-heading">Tandy’s Basketweavers</h2>
         <div>490 Freedom Drive<br>
         Philadelphia, PA 19425</div>
+        <div id="smallitem" data-toggle="modal" data-target="#myModal">Lower Inventory</div>
+        <!-- <button type="button" class="btn btn-primary btn-xs">Small button</button> -->
       </div>
       <div class="item">
         <h2 class="item-heading">Basket Case</h2>
@@ -60,7 +151,7 @@
     <script src="js/jquery-2.2.0.js"></script>
     <script src="js/leaflet.js"></script>
     <!-- Choose a frontend framework Javascript file: -->
-    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.js"></script>
     <!-- <script src="js/material.js"></script> -->
     <!-- <script src="js/assembly.js"></script>  -->
     <script src="js/setup.js"></script>

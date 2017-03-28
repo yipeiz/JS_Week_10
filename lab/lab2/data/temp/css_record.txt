@@ -1,0 +1,39 @@
+#layer {
+  polygon-fill: #7f2860;
+  [area_num_1 < 70] {
+  polygon-fill: #a3057f;
+  }
+  [area_num_1 < 60] {
+  polygon-fill: #b7008e;
+  }
+  [area_num_1 < 50] {
+  polygon-fill: #cc00a0;
+  }
+  [area_num_1 < 40] {
+  polygon-fill: #e87fc9;
+  }
+  [area_num_1 < 20] {
+  polygon-fill: #eda0d3;
+  }
+  [area_num_1 < 10] {
+  polygon-fill: #f2bad8;
+  }
+  
+  polygon-opacity: 0.9;
+  line-width: 1;
+  line-color: #FFF;
+  line-opacity: 0.5;
+}
+#layer::labels {
+  text-name: [area_num_1];
+  text-face-name: 'DejaVu Sans Book';
+  text-size: 9;
+  text-fill: #FFFFFF;
+  text-label-position-tolerance: 0;
+  text-halo-radius: 1;
+  text-halo-fill: #6F808D;
+  text-dy: -2;
+  text-allow-overlap: true;
+  text-placement: point;
+  text-placement-type: dummy;
+}

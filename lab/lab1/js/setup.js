@@ -11,3 +11,5 @@ var Stamen_TonerLite = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{
   ext: 'png'
 }).addTo(map);
 
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("smallitem");

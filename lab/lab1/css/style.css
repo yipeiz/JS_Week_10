@@ -28,6 +28,23 @@ body {
     background-color: #eee;
 }
 
+#smallitem {
+  margin-top: 10px;
+    padding-left: 5px;
+    width: 110px;
+    height:20px;
+    background-color:#e1354f;
+    color: #FFFFFF;
+}
+
+#smallitem2 {
+    margin: 10px;
+    padding: 5px;
+    height:30px;
+    background-color:#e1354f;
+    color: #FFFFFF;
+}
+
 .item:not(:last-child) {
     margin-bottom: 10px;
 }
